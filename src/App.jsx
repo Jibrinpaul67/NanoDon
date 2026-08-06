@@ -27,6 +27,7 @@ export default function App() {
             <a href="#mission" className="hover:text-black">Mission</a>
             <a href="#systems" className="hover:text-black">Systems</a>
             <a href="#field" className="hover:text-black">Field Use</a>
+            <a href="#field" className="hover:text-black">Schedule a Demonstration</a>
           </div>
           <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em]">
             <span className={`h-2 w-2 rounded-full ${online ? "bg-lime-700" : "bg-orange-600"}`} />
