@@ -78,7 +78,7 @@ export default function Join() {
             <span className="h-px w-10 bg-black/30" />
 
             <span className="text-[10px] uppercase tracking-[0.3em] text-black/45">
-              Careers / Collaboration
+              Careers
             </span>
           </div>
 
@@ -86,17 +86,16 @@ export default function Join() {
 
             <div>
               <h1 className="max-w-5xl text-6xl font-medium leading-[0.9] tracking-[-0.055em] md:text-8xl">
-                Build what
+                People who
                 <br />
-                goes first.
+                Build
               </h1>
             </div>
 
             <div className="max-w-md">
               <p className="text-sm leading-7 text-black/55 md:text-base">
-                Caracal brings together engineers, researchers, designers,
-                and problem-solvers working across robotics, artificial
-                intelligence, autonomous systems and advanced technology.
+                We are interested in people who can take difficult problems,
+                understand them deeply, and turn ideas into working systems.
               </p>
 
               <div className="mt-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-black/35">
@@ -110,52 +109,9 @@ export default function Join() {
       </section>
 
 
-      {/* ================= WHO WE ARE LOOKING FOR ================= */}
-
-      <section className="border-y border-black/10 px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto max-w-7xl">
-
-          <div className="grid gap-16 lg:grid-cols-[.7fr_1.3fr]">
-
-            <div>
-              <div className="mb-5 flex items-center gap-3">
-                <span className="h-px w-10 bg-black/30" />
-
-                <span className="text-[10px] uppercase tracking-[0.3em] text-black/40">
-                  Who we need
-                </span>
-              </div>
-
-              <h2 className="text-4xl font-medium tracking-[-0.04em] md:text-5xl">
-                People who
-                <br />
-                build things.
-              </h2>
-            </div>
-
-            <div className="max-w-3xl">
-              <p className="text-lg leading-8 text-black/60">
-                We are interested in people who can take difficult problems,
-                understand them deeply, and turn ideas into working systems.
-              </p>
-
-              <p className="mt-6 text-sm leading-7 text-black/40">
-                You don't have to fit perfectly into one category. If your
-                background is in engineering, research, robotics, AI, design,
-                security, hardware or another technical discipline, we want
-                to hear you.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
       {/* ================= DISCIPLINES ================= */}
 
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="border-t border-black/10 px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-7xl">
 
           <div className="mb-16">
