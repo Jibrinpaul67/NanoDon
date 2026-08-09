@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Eye, Radio, Shield, Volume2, Wind, MapPin } from "lucide-react";
+import { ArrowDown, Eye, Radio, Volume2, Wind, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const specs = [
@@ -23,14 +23,19 @@ export default function App() {
       <section className="relative min-h-screen border-b border-black/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(100,115,76,.22),transparent_30%),radial-gradient(circle_at_20%_70%,rgba(58,62,51,.10),transparent_25%)]" />
     <nav className="fixed left-0 right-0 top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-black/10 bg-white/90 px-6 py-5 backdrop-blur-md md:px-10">
-  <div className="tracking-[0.28em] text-sm font-semibold">
-    Caracal
-  </div>
+  <a href="/" className="tracking-[0.28em]">
+  <img
+    src="/stroke.png"
+    alt="Caracal"
+    className="h-10 w-auto object-contain"
+  />
+</a>
 
   <div className="hidden gap-8 text-xs uppercase tracking-[0.22em] text-black/55 md:flex">
-    <a href="#mission" className="transition hover:text-black">   Mission </a>
-    <a href="#systems" className="transition hover:text-black">  Systems</a>
-    <a href="#field" className="transition hover:text-black">  Field Use </a>
+    <a href="#mission"  className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">   Mission </a>
+    <a href="#systems"  className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">  Systems</a>
+    <a href="#field"  className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">  Field Use </a>
+    <Link to="/join" className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">Join Us</Link>
     <Link to="/request" className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black" >
       <span className="absolute left-0 top-0 h-2 w-2 border-l border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
       <span className="absolute right-0 top-0 h-2 w-2 border-r border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
@@ -293,39 +298,66 @@ export default function App() {
       <br />
       LON 07.3986
 
-    </div>
-
-  </div>
-
-</div>
-
-        </div>
+    </div></div></div></div>
 
         <div className="absolute bottom-8 left-6 md:left-10"><ArrowDown className="h-5 w-5 animate-bounce" /></div>
       </section>
 
-      <section id="mission" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-36">
-        <div className="grid gap-14 md:grid-cols-[.7fr_1.3fr]">
-          <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-black/45">01 / Mission</p>
-            <h2 className="mt-4 text-4xl tracking-[-0.04em] md:text-6xl">Keep people out of the unknown.</h2>
-          </div>
-          <div className="max-w-3xl text-xl leading-9 text-black/65 md:text-2xl">
-            <p>Caracal Agents are designed around a simple principle: <span className="text-black">send the machine before the human.</span></p>
-            
-            <p className="mt-8"> It is built to enter environments where sending people first could put them at unnecessary risk. Its compact, low-profile 
-            design enables discreet reconnaissance, capturing visual and audio intelligence from hazardous or uncertain environments and 
-            delivering it to teams before they commit personnel.</p>
-            <p className="mt-8">Every mission remains human-directed.</p>
-          </div>
-        </div>
-      </section>
+
+{/* mission  */}
+<section
+  id="mission"
+  className="relative overflow-hidden px-6 py-24 md:px-10 md:py-36"
+>
+  {/* Background image */}
+  <div className="absolute inset-0">
+    <img
+      src="/black.png"
+      alt=""
+      className="h-full w-full object-cover opacity-60"
+    />
+  </div>
+
+  {/* Content */}
+  <div className="relative z-10 grid gap-14 md:grid-cols-[.7fr_1.3fr]">
+
+    <div>
+      <p className="text-xs uppercase tracking-[0.28em] text-black/45">
+        01 / Mission
+      </p>
+
+      <h2 className="mt-4 text-4xl tracking-[-0.04em] md:text-6xl">
+        Keep people out of the unknown.
+      </h2>
+    </div>
+
+    <div className="max-w-3xl text-xl leading-9 text-black md:text-2xl">
+      <p>
+        Caracal Agents are designed around a simple principle:
+        <span className="text-black/65"> send the machine before the human.</span>
+      </p>
+
+      <p className="mt-8">
+        It is built to enter environments where sending people first could
+        put them at unnecessary risk. Its compact, low-profile design enables
+        discreet reconnaissance, capturing visual and audio intelligence from
+        hazardous or uncertain environments and delivering it to teams before
+        they commit personnel.
+      </p>
+
+      <p className="mt-8">
+        Every mission remains human-directed.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       <section id="systems" className="border-y border-black/10 bg-[#dcd8ce]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
           <div className="mb-14 flex items-end justify-between gap-6">
             <div><p className="text-xs uppercase tracking-[0.28em] text-black/45">02 / Systems</p><h2 className="mt-3 text-4xl tracking-[-0.04em] md:text-6xl">Small frame.<br />Serious awareness.</h2></div>
-            <Shield className="hidden h-12 w-12 text-black/35 md:block" strokeWidth={1} />
           </div>
           <div className="grid gap-px overflow-hidden rounded-3xl border border-black/10 bg-black/10 md:grid-cols-2">
             {specs.map(([n, title, body]) => (
@@ -361,11 +393,230 @@ export default function App() {
         </div>
       </section>
 
+      <section id="importance" className="bg-[#f4f3ee] px-6 py-24 md:px-10 lg:py-32">
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-20 max-w-3xl">
+      <div className="mb-6 flex items-center gap-3">
+        <span className="h-px w-10 bg-black/30" />
+        <span className="text-[10px] uppercase tracking-[0.3em] text-black/45">
+          Why Caracal
+        </span>
+      </div>
+    </div>
+
+    {/* THREE REASONS */}
+    <div className="grid gap-px overflow-hidden border border-black/10 bg-black/10 lg:grid-cols-3">
+
+      <div className="group bg-[#f4f3ee] p-8 transition-colors duration-500 hover:bg-white md:p-10">
+
+        {/* NUMBER */}
+        <div className="mb-14 flex items-center justify-between">
+          <span className="text-[10px] tracking-[0.25em] text-black/35">
+            01
+          </span>
+
+          <span className="text-[9px] uppercase tracking-[0.25em] text-black/25">
+            Risk Architecture
+          </span>
+        </div>
+
+        {/* TITLE */}
+        <h3 className="max-w-sm text-2xl font-medium leading-tight tracking-[-0.02em]">
+          It changes the
+          <br />
+          risk equation.
+        </h3>
+
+        {/* SUB REASONS */}
+        <div className="mt-12 divide-y divide-black/10">
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Risk separation
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              The machine can enter hazardous environments while personnel
+              remain outside the immediate risk zone.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Reversible loss
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Losing a reconnaissance platform is materially different from
+              losing a trained human operator.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Unknown environments
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Teams can gather preliminary information before committing
+              personnel to unfamiliar spaces.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Reduced uncertainty
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Visual and audio observations help establish what exists inside
+              an environment before entry.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      {/* ========================= */}
+      {/* 02 — INFORMATION */}
+      {/* ========================= */}
+
+      <div className="group bg-[#f4f3ee] p-8 transition-colors duration-500 hover:bg-white md:p-10">
+
+        <div className="mb-14 flex items-center justify-between">
+          <span className="text-[10px] tracking-[0.25em] text-black/35">
+            02
+          </span>
+
+          <span className="text-[9px] uppercase tracking-[0.25em] text-black/25">
+            Information Systems
+          </span>
+        </div>
+
+        <h3 className="max-w-sm text-2xl font-medium leading-tight tracking-[-0.02em]">
+          It turns uncertainty
+          <br />
+          into information.
+        </h3>
+        <div className="mt-12 divide-y divide-black/10">
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Remote perception
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Observe environments without requiring personnel to physically
+              enter them.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Multimodal intelligence
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Visual and audio observations provide complementary information
+              about the environment.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Persistent observation
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              A machine can maintain an observation position without requiring
+              a person to continuously occupy it.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Evidence creation
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Recorded observations provide a reference for later analysis and
+              review.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      {/* ========================= */}
+      {/* 03 — DECISION */}
+      {/* ========================= */}
+
+      <div className="group bg-[#f4f3ee] p-8 transition-colors duration-500 hover:bg-white md:p-10">
+
+        <div className="mb-14 flex items-center justify-between">
+          <span className="text-[10px] tracking-[0.25em] text-black/35">
+            03
+          </span>
+
+          <span className="text-[9px] uppercase tracking-[0.25em] text-black/25">
+            Decision Systems
+          </span>
+        </div>
+
+        <h3 className="max-w-sm text-2xl font-medium leading-tight tracking-[-0.02em]">
+          It improves the
+          <br />
+          quality of decisions.
+        </h3>
+
+        <div className="mt-12 divide-y divide-black/10">
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Human-machine complementarity
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Machines handle reconnaissance and sensing while humans retain
+              responsibility for interpretation and decisions.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Decision latency
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Remote information can reduce the time required to establish an
+              initial understanding of an environment.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Prioritisation
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Early observations can help teams determine which areas require
+              attention first.
+            </p>
+          </div>
+
+          <div className="py-5">
+            <span className="text-[9px] uppercase tracking-[0.2em] text-black/35">
+              Decision traceability
+            </span>
+            <p className="mt-2 text-xs leading-5 text-black/55">
+              Recorded observations provide a factual basis for subsequent
+              analysis, review, and improvement.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
       <footer className="border-t border-black/10 px-6 py-8 md:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 text-[10px] uppercase tracking-[0.2em] text-black/40 md:flex-row md:items-center md:justify-between">
           <span>© 2026 Caracal. All rights reserved</span>
            <a href="#robot" className="hover:text-black">Robot</a>
-           <a href="#career" className="hover:text-black">Join Us</a>
+            <Link to="/join" className="hover:text-black">Join Us</Link>
           <span>RECONNAISSANCE · RESCUE · HAZARD RESPONSE</span>
 </div>
       </footer>
