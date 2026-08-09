@@ -22,31 +22,33 @@ export default function App() {
     <main className="min-h-screen overflow-x-hidden bg-[#e9e6df] text-[#10120f] font-sans">
       <section className="relative min-h-screen border-b border-black/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(100,115,76,.22),transparent_30%),radial-gradient(circle_at_20%_70%,rgba(58,62,51,.10),transparent_25%)]" />
-        <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-7 md:px-10">
-          <div className="tracking-[0.28em] text-sm font-semibold">Caracal</div>
-          <div className="hidden gap-8 text-xs uppercase tracking-[0.22em] text-black/55 md:flex">
-            <a href="#mission" className="hover:text-black">Mission</a>
-            <a href="#systems" className="hover:text-black">Systems</a>
-            <a href="#field" className="hover:text-black">Field Use</a>
-              <Link
-  to="/request" className="group relative inline-block px-4 py-2 text-red/70 transition hover:text-black">
-  {/* Top-left */}
-  <span className="absolute left-0 top-0 h-2 w-2 border-l border-t border-current transition-all duration-300 group-hover:h-3 group-hover:w-3" />
-  <span className="absolute right-0 top-0 h-2 w-2 border-r border-t border-current transition-all duration-300 group-hover:h-3 group-hover:w-3" />
-  <span className="absolute bottom-0 left-0 h-2 w-2 border-b border-l border-current transition-all duration-300 group-hover:h-3 group-hover:w-3" />
-  <span className="absolute bottom-0 right-0 h-2 w-2 border-b border-r border-current transition-all duration-300 group-hover:h-3 group-hover:w-3" />
-Schedule a Demonstration
-</Link>
-          </div>
+    <nav className="fixed left-0 right-0 top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-black/10 bg-white/90 px-6 py-5 backdrop-blur-md md:px-10">
+  <div className="tracking-[0.28em] text-sm font-semibold">
+    Caracal
+  </div>
 
+  <div className="hidden gap-8 text-xs uppercase tracking-[0.22em] text-black/55 md:flex">
+    <a href="#mission" className="transition hover:text-black">   Mission </a>
+    <a href="#systems" className="transition hover:text-black">  Systems</a>
+    <a href="#field" className="transition hover:text-black">  Field Use </a>
+    <Link to="/request" className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black" >
+      <span className="absolute left-0 top-0 h-2 w-2 border-l border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
+      <span className="absolute right-0 top-0 h-2 w-2 border-r border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
+      <span className="absolute bottom-0 left-0 h-2 w-2 border-b border-l border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
+      <span className="absolute bottom-0 right-0 h-2 w-2 border-b border-r border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
+      Schedule a Demonstration
+    </Link>
+  </div>
 
-
-
-          <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em]">
-            <span className={`h-2 w-2 rounded-full ${online ? "bg-lime-700" : "bg-orange-600"}`} />
-            {online ? "System online" : "Standby"}
-          </div>
-        </nav>
+  <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em]">
+    <span
+      className={`h-2 w-2 rounded-full ${
+        online ? "bg-lime-700" : "bg-orange-600"
+      }`}
+    />
+    {online ? "System online" : "Standby"}
+  </div>
+</nav>
 
         <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-16 md:grid-cols-[1fr_1.1fr] md:px-10 md:pt-24">
           <div>
@@ -54,37 +56,18 @@ Schedule a Demonstration
               Hazard-zone autonomous reconnaissance
             </motion.p>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .08 }} className="max-w-3xl text-6xl font-medium leading-[0.9] tracking-[-0.055em] md:text-[8rem]">
-              Caracal<br />Tech
+              Caracal<br />Agents
             </motion.h1>
             <p className="mt-8 max-w-xl text-base leading-7 text-black/65 md:text-lg">
               A nano-class reconnaissance platform built to enter places humans should not. Caracal agents gives operators eyes, ears and environmental awareness before they commit people to the scene.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <a href="#mission" className="rounded-full bg-[#10120f] px-6 py-3 text-xs uppercase tracking-[0.18em] text-white transition hover:scale-[1.02]">Explore system</a>
+              <a href="#mission" className="rounded-full bg-[#10120f] px-6 py-3 text-xs uppercase tracking-[0.18em] text-white transition hover:scale-[1.02]">Explore Robot</a>
               <a href="#field" className="rounded-full border border-black/20 px-6 py-3 text-xs uppercase tracking-[0.18em] transition hover:bg-black/5">Field profile</a>
             </div>
           </div>
 
 
-
-
-
-
-          {/* <div className="relative aspect-square overflow-hidden rounded-[2.5rem] border border-black/10 bg-[#dad6cc] shadow-[0_30px_80px_rgba(0,0,0,.12)]">
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(16,18,15,.07)_1px,transparent_1px),linear-gradient(90deg,rgba(16,18,15,.07)_1px,transparent_1px)] bg-[size:42px_42px]" />
-            <div className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full border border-black/20 bg-[#252822] shadow-2xl md:h-64 md:w-64">
-              <div className="absolute left-1/2 top-1/2 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full border border-lime-200/40 bg-[#3a4036] shadow-[inset_0_0_30px_rgba(150,180,110,.12)] md:h-28 md:w-28" />
-              {[0, 90, 180, 270].map((r) => <div key={r} style={{ transform: `translate(-50%, -50%) rotate(${r}deg) translateY(-48%)` }} className="absolute left-1/2 top-1/2 h-16 w-2 rounded-full bg-[#161916] md:h-24" />)}
-              <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-lime-300 shadow-[0_0_20px_rgba(170,230,120,.75)]" />
-            </div>
-            <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between rounded-2xl bg-white/35 p-4 backdrop-blur-md">
-              <div>
-                <div className="text-[10px] uppercase tracking-[0.25em] text-black/45">Prototype visualisation</div>
-                <div className="mt-1 font-mono text-xs">Angel-N057 / RECON CONFIGURATION</div>
-              </div>
-              <div className="text-right font-mono text-[10px] leading-5 text-black/55">LIVE FEED<br />LAT 09.0765<br />LON 07.3986</div>
-            </div>
-          </div> */}
           <div className="relative aspect-square overflow-hidden rounded-[2.5rem] border border-black/10 bg-[#dad6cc] shadow-[0_30px_80px_rgba(0,0,0,.12)]">
 
   {/* Grid */}
@@ -316,8 +299,6 @@ Schedule a Demonstration
 
 </div>
 
-
-
         </div>
 
         <div className="absolute bottom-8 left-6 md:left-10"><ArrowDown className="h-5 w-5 animate-bounce" /></div>
@@ -327,11 +308,15 @@ Schedule a Demonstration
         <div className="grid gap-14 md:grid-cols-[.7fr_1.3fr]">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-black/45">01 / Mission</p>
-            <h2 className="mt-4 text-4xl tracking-[-0.04em] md:text-6xl">Keep people out of the first unknown.</h2>
+            <h2 className="mt-4 text-4xl tracking-[-0.04em] md:text-6xl">Keep people out of the unknown.</h2>
           </div>
           <div className="max-w-3xl text-xl leading-9 text-black/65 md:text-2xl">
-            <p>Caracal Agents are designed around a simple principle: <span className="text-black">send the machine before the human.</span> Enter collapsed structures, smoke-filled corridors and contaminated or otherwise hazardous spaces to collect information and help teams make safer decisions.</p>
-            <p className="mt-8">Every mission remains human-directed. The platform is built for perception, communication and navigation</p>
+            <p>Caracal Agents are designed around a simple principle: <span className="text-black">send the machine before the human.</span></p>
+            
+            <p className="mt-8"> It is built to enter environments where sending people first could put them at unnecessary risk. Its compact, low-profile 
+            design enables discreet reconnaissance, capturing visual and audio intelligence from hazardous or uncertain environments and 
+            delivering it to teams before they commit personnel.</p>
+            <p className="mt-8">Every mission remains human-directed.</p>
           </div>
         </div>
       </section>
@@ -382,7 +367,7 @@ Schedule a Demonstration
            <a href="#robot" className="hover:text-black">Robot</a>
            <a href="#career" className="hover:text-black">Join Us</a>
           <span>RECONNAISSANCE · RESCUE · HAZARD RESPONSE</span>
-        </div>
+</div>
       </footer>
     </main>
   );

@@ -5,7 +5,6 @@ import {
   Check,
   ChevronDown,
   FileText,
-  LockKeyhole,
   Upload,
 } from "lucide-react";
 
