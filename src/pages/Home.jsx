@@ -67,7 +67,7 @@ export default function App() {
               A nano-class reconnaissance platform built to enter places humans should not. Caracal agents gives operators eyes, ears and environmental awareness before they commit people to the scene.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <a href="#mission" className="rounded-full bg-[#10120f] px-6 py-3 text-xs uppercase tracking-[0.18em] text-white transition hover:scale-[1.02]">Explore Robot</a>
+              <a href="#robot" className="rounded-full bg-[#10120f] px-6 py-3 text-xs uppercase tracking-[0.18em] text-white transition hover:scale-[1.02]">Explore Robot</a>
               <a href="#field" className="rounded-full border border-black/20 px-6 py-3 text-xs uppercase tracking-[0.18em] transition hover:bg-black/5">Field profile</a>
             </div>
           </div>
