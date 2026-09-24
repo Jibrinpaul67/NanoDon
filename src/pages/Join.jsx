@@ -24,7 +24,7 @@ export default function Join() {
       {/* ================= HEADER ================= */}
 
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-[#f4f3ee]/90 backdrop-blur-md">
-          <nav className="fixed left-0 right-0 top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-black/10 bg-white/90 px-6 py-5 backdrop-blur-md md:px-10">
+    <nav className="fixed left-0 right-0 top-0 z-50 mx-auto flex w-full items-center justify-between border-b border-black/10 bg-white/90 px-6 py-5 backdrop-blur-md md:px-10">
   <a href="/" className="tracking-[0.28em]">
   <img
     src="/stroke.png"
@@ -34,27 +34,15 @@ export default function Join() {
 </a>
 
   <div className="hidden gap-8 text-xs uppercase tracking-[0.22em] text-black/55 md:flex">
-   <div className="flex items-center gap-4">
-
-  {/* Home */}
-  <Link to="/" className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">
-   Home
-  </Link>
-
-  {/* Schedule a Demonstration */}
-  <Link
-    to="/request"
-    className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black"
-  >
-    <span className="absolute left-0 top-0 h-2 w-2 border-l border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
-    <span className="absolute right-0 top-0 h-2 w-2 border-r border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
-    <span className="absolute bottom-0 left-0 h-2 w-2 border-b border-l border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
-    <span className="absolute bottom-0 right-0 h-2 w-2 border-b border-r border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
-
-    Schedule a Demonstration
-  </Link>
-
-</div>
+    <a href="/"  className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">  Systems</a>
+    <Link to="/join" className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">Join Us</Link>
+    <Link to="/request" className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black" >
+      <span className="absolute left-0 top-0 h-2 w-2 border-l border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
+      <span className="absolute right-0 top-0 h-2 w-2 border-r border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
+      <span className="absolute bottom-0 left-0 h-2 w-2 border-b border-l border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
+      <span className="absolute bottom-0 right-0 h-2 w-2 border-b border-r border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
+      Schedule a Demonstration
+    </Link>
   </div>
 
   <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em]">
@@ -107,72 +95,6 @@ export default function Join() {
           </div>
         </div>
       </section>
-
-
-      {/* ================= DISCIPLINES ================= */}
-
-      <section className="border-t border-black/10 px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto max-w-7xl">
-
-          <div className="mb-16">
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-10 bg-black/30" />
-
-              <span className="text-[10px] uppercase tracking-[0.3em] text-black/40">
-                Areas of work
-              </span>
-            </div>
-
-            <h2 className="text-4xl font-medium tracking-[-0.04em] md:text-6xl">
-              Different disciplines.
-              <br />
-              One system.
-            </h2>
-          </div>
-
-
-          <div className="grid gap-px border border-black/10 bg-black/10 md:grid-cols-2 lg:grid-cols-3">
-
-            <Role
-              icon={<Cpu size={20} />}
-              title="Robotics"
-              description="Build machines capable of sensing, navigating, and operating in complex physical environments."
-            />
-
-            <Role
-              icon={<Terminal size={20} />}
-              title="Software Engineering"
-              description="Develop the software infrastructure connecting autonomous platforms, sensors, data, and operators."
-            />
-
-            <Role
-              icon={<Eye size={20} />}
-              title="AI & Computer Vision"
-              description="Develop systems that turn sensor data into useful information and machine perception."
-            />
-
-            <Role
-              icon={<Radio size={20} />}
-              title="Embedded Systems"
-              description="Engineer the low-level systems responsible for sensing, communication, control, and computation."
-            />
-
-            <Role
-              icon={<Shield size={20} />}
-              title="Security"
-              description="Build resilient systems designed to remain trustworthy in demanding environments."
-            />
-
-            <Role
-              icon={<Users size={20} />}
-              title="Product & Design"
-              description="Design interfaces and experiences that make complex technical systems understandable and usable."
-            />
-
-          </div>
-        </div>
-      </section>
-
 
       {/* ================= WHAT WE VALUE ================= */}
 
@@ -267,7 +189,7 @@ export default function Join() {
               </div>
 
               <a
-                href="mailto:careers@caracal.tech"
+                href="mailto:info@omitechnologies.com.ng"
                 className="group inline-flex items-center gap-4 bg-[#11130f] px-7 py-4 text-xs uppercase tracking-[0.2em] text-white transition hover:bg-black"
               >
                 Get in touch
@@ -287,8 +209,6 @@ export default function Join() {
       <footer className="border-t border-black/10 px-6 py-8 md:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 text-[10px] uppercase tracking-[0.2em] text-black/40 md:flex-row md:items-center md:justify-between">
           <span>© 2026 Caracal. All rights reserved</span>
-           <a href="#robot" className="hover:text-black">Robot</a>
-            <Link to="/join" className="hover:text-black">Join Us</Link>
           <span>RECONNAISSANCE · RESCUE · HAZARD RESPONSE</span>
 </div>
       </footer>

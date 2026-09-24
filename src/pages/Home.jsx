@@ -32,9 +32,7 @@ export default function App() {
 </a>
 
   <div className="hidden gap-8 text-xs uppercase tracking-[0.22em] text-black/55 md:flex">
-    <a href="#mission"  className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">   Mission </a>
-    <a href="#systems"  className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">  Systems</a>
-    <a href="#field"  className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">  Field Use </a>
+    <a href="/"  className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">  Systems</a>
     <Link to="/join" className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black">Join Us</Link>
     <Link to="/request" className="group relative inline-block px-4 py-2 text-black/70 transition hover:text-black" >
       <span className="absolute left-0 top-0 h-2 w-2 border-l border-t border-black/50 transition-all duration-300 group-hover:h-3 group-hover:w-3" />
@@ -67,8 +65,7 @@ export default function App() {
               A nano-class reconnaissance platform built to enter places humans should not. Caracal agents gives operators eyes, ears and environmental awareness before they commit people to the scene.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <a href="#robot" className="rounded-full bg-[#10120f] px-6 py-3 text-xs uppercase tracking-[0.18em] text-white transition hover:scale-[1.02]">Explore Robot</a>
-              <a href="#field" className="rounded-full border border-black/20 px-6 py-3 text-xs uppercase tracking-[0.18em] transition hover:bg-black/5">Field profile</a>
+              <a href="#robot" className="rounded-full bg-[#10120f] px-6 py-3 text-xs uppercase tracking-[0.18em] text-white transition hover:scale-[1.02]">Explore Robots</a>
             </div>
           </div>
 
@@ -304,60 +301,10 @@ export default function App() {
       </section>
 
 
-{/* mission  */}
-<section
-  id="mission"
-  className="relative overflow-hidden px-6 py-24 md:px-10 md:py-36"
->
-  {/* Background image */}
-  <div className="absolute inset-0">
-    <img
-      src="/black.png"
-      alt=""
-      className="h-full w-full object-cover opacity-60"
-    />
-  </div>
-
-  {/* Content */}
-  <div className="relative z-10 grid gap-14 md:grid-cols-[.7fr_1.3fr]">
-
-    <div>
-      <p className="text-xs uppercase tracking-[0.28em] text-black/45">
-        01 / Mission
-      </p>
-
-      <h2 className="mt-4 text-4xl tracking-[-0.04em] md:text-6xl">
-        Keep people out of the unknown.
-      </h2>
-    </div>
-
-    <div className="max-w-3xl text-xl leading-9 text-black md:text-2xl">
-      <p>
-        Caracal Agents are designed around a simple principle:
-        <span className="text-black/65"> send the machine before the human.</span>
-      </p>
-
-      <p className="mt-8">
-        It is built to enter environments where sending people first could
-        put them at unnecessary risk. Its compact, low-profile design enables
-        discreet reconnaissance, capturing visual and audio intelligence from
-        hazardous or uncertain environments and delivering it to teams before
-        they commit personnel.
-      </p>
-
-      <p className="mt-8">
-        Every mission remains human-directed.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
       <section id="systems" className="border-y border-black/10 bg-[#dcd8ce]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
           <div className="mb-14 flex items-end justify-between gap-6">
-            <div><p className="text-xs uppercase tracking-[0.28em] text-black/45">02 / Systems</p><h2 className="mt-3 text-4xl tracking-[-0.04em] md:text-6xl">Small frame.<br />Serious awareness.</h2></div>
+            <div><h2 className="mt-3 text-4xl tracking-[-0.04em] md:text-6xl">Small frame.<br />Serious awareness.</h2></div>
           </div>
           <div className="grid gap-px overflow-hidden rounded-3xl border border-black/10 bg-black/10 md:grid-cols-2">
             {specs.map(([n, title, body]) => (
@@ -367,28 +314,6 @@ export default function App() {
                 <p className="mt-3 max-w-md leading-7 text-black/60">{body}</p>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="field" className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
-        <div className="grid gap-8 md:grid-cols-3">
-          <div className="rounded-3xl bg-[#151815] p-8 text-white md:col-span-2 md:p-12">
-            <p className="text-xs uppercase tracking-[0.28em] text-white/40">03 / Field profile</p>
-            <h2 className="mt-5 max-w-2xl text-4xl tracking-[-0.045em] md:text-6xl">Built for the places that make humans hesitate.</h2>
-            <div className="mt-12 grid gap-7 sm:grid-cols-2">
-              <div className="flex gap-4"><Eye className="mt-1 h-5 w-5 shrink-0" /><div><div className="font-medium">Visual awareness</div><p className="mt-1 text-sm leading-6 text-white/50">Live operator-view imagery for reconnaissance and assessment.</p></div></div>
-              <div className="flex gap-4"><Volume2 className="mt-1 h-5 w-5 shrink-0" /><div><div className="font-medium">Acoustic sensing</div><p className="mt-1 text-sm leading-6 text-white/50">Audio cues help operators understand activity beyond line of sight.</p></div></div>
-              <div className="flex gap-4"><Radio className="mt-1 h-5 w-5 shrink-0" /><div><div className="font-medium">Resilient comms</div><p className="mt-1 text-sm leading-6 text-white/50">Remote command and status telemetry for controlled missions.</p></div></div>
-              <div className="flex gap-4"><MapPin className="mt-1 h-5 w-5 shrink-0" /><div><div className="font-medium">Hazard mapping</div><p className="mt-1 text-sm leading-6 text-white/50">Marks points of interest and environmental hazards for response teams.</p></div></div>
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-black/10 bg-[#e3dfd5] p-8 md:p-10">
-            <Wind className="h-6 w-6 text-black/40" strokeWidth={1.5} />
-            <div className="mt-14 font-mono text-[10px] uppercase tracking-[0.2em] text-black/40">Operating principle</div>
-            <div className="mt-4 text-3xl tracking-[-0.04em]">Human decision.<br />Machine reach.</div>
-            <div className="mt-10 border-t border-black/10 pt-6 font-mono text-[10px] leading-5 text-black/45">NON-LETHAL RECON CONFIGURATION<br />HUMAN-IN-THE-LOOP CONTROL<br />DESIGNED FOR HAZARDOUS ENVIRONMENTS</div>
           </div>
         </div>
       </section>
@@ -615,8 +540,6 @@ export default function App() {
       <footer className="border-t border-black/10 px-6 py-8 md:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 text-[10px] uppercase tracking-[0.2em] text-black/40 md:flex-row md:items-center md:justify-between">
           <span>© 2026 Caracal. All rights reserved</span>
-           <a href="#robot" className="hover:text-black">Robot</a>
-            <Link to="/join" className="hover:text-black">Join Us</Link>
           <span>RECONNAISSANCE · RESCUE · HAZARD RESPONSE</span>
 </div>
       </footer>
